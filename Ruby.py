@@ -42,8 +42,7 @@ class Ruby(pygame.sprite.Sprite):
         # Kinematic vectors
         self.position = pygame.math.Vector2(self.rect.x, self.rect.y)
         self.velocity = pygame.math.Vector2(
-            random.choice([-1 * self.HORIZONTAL_VELOCITY, self.HORIZONTAL_VELOCITY]), 0
-        )
+            random.choice([-1 * self.HORIZONTAL_VELOCITY, self.HORIZONTAL_VELOCITY]), 0)
         self.acceleration = pygame.math.Vector2(0, self.VERTICAL_ACCELERATION)
 
     def update(self):

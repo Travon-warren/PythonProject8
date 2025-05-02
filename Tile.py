@@ -3,9 +3,9 @@ import pygame
 class Tile(pygame.sprite.Sprite):
     """A class to represent a 32x32 pixel area in our display"""
 
-    def __init__(self, x, y, image_int, main_group, sub_group=""):
+    def __init__(self, x, y, image_int, main_group, sub_group=None):
         super().__init__()
-        #Load in the correct image and add it to the correct sub group
+        #Load in the correct image and add it to the correct subgroup
         #Dirt tiles
         if image_int == 1:
             self.image = pygame.transform.scale(pygame.image.load("./assets/images/tiles/Tile (1).png"), (32, 32))

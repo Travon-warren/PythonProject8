@@ -15,13 +15,23 @@ class Portal(pygame.sprite.Sprite):
         if color == "green":
             # Green portal
             for i in range(22):  # Add images from tile000.png to tile021.png
-                self.portal_sprites.append(pygame.transform.scale(
-                    pygame.image.load(f"assets/images/portals/green/tile00{i}.png"), (72, 72)))
+                if i < 10:
+                    self.portal_sprites.append(pygame.transform.scale(
+                        pygame.image.load(f"assets/images/portals/green/tile00{i}.png"), (72, 72)))
+                else:
+                    self.portal_sprites.append(pygame.transform.scale(
+                        pygame.image.load(f"assets/images/portals/green/tile0{i}.png"), (72, 72)))
+
         else:
             # Purple portal
             for i in range(22):  # Add images from tile000.png to tile021.png
-                self.portal_sprites.append(pygame.transform.scale(
-                    pygame.image.load(f"assets/images/portals/purple/tile00{i}.png"), (72, 72)))
+                if i < 10:
+                    self.portal_sprites.append(pygame.transform.scale(
+                        pygame.image.load(f"assets/images/portals/purple/tile00{i}.png"), (72, 72)))
+                else:
+                    self.portal_sprites.append(pygame.transform.scale(
+                        pygame.image.load(f"assets/images/portals/purple/tile0{i}.png"), (72, 72)))
+
 
         # Load an image and get a rect
         self.current_sprite = random.randint(0, len(self.portal_sprites) - 1)  # Set a random sprite as the starting frame

@@ -39,4 +39,6 @@ class RubyMaker(pygame.sprite.Sprite):
             self.current_sprite += speed  # Increment the current sprite index.
         else:
             self.current_sprite = 0  # Reset to the first frame.
+        self.image = sprite_list[int(self.current_sprite)]  # Update image
+
 
